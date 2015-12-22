@@ -2,13 +2,13 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/video.hpp"
 #include "opencv2/objdetect.hpp"
+// from ken's code.
 #include "opencv2/highgui.hpp"
 
 using namespace cv;
 using namespace std;
 
-class Histogram
-{
+class Histogram{
 protected:
 	Mat mImage;
 	int mNumberChannels;
@@ -31,8 +31,8 @@ public:
 		}
 		//ComputeHistogram();
 	}
-	virtual void ComputeHistogram()=0;
-	virtual void NormaliseHistogram()=0;
+	virtual void ComputeHistogram() = 0;
+	virtual void NormaliseHistogram() = 0;
 	static void Draw1DHistogram( MatND histograms[], int number_of_histograms, Mat& display_image )
 	{
 		int number_of_bins = histograms[0].size[0];

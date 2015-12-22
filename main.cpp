@@ -11,11 +11,6 @@
 #include <tuple>
 #include "Headers/Utilities.h"
 #include "Histograms.cpp"
-#include "Headers/Points.h"
-#include "Headers/ImageFunctions.h"
-#include "Headers/Drawing.h"
-#include "Headers/Operations.h"
-#include "Headers/Metrics.h"
 #include "Headers/VideoFunctions.h"
  
 using namespace std;
@@ -32,10 +27,9 @@ char * videoLocations[] = {"ObjectAbandonmentAndRemoval1.avi","ObjectAbandonment
 
 // Function to run program
 int main(int argc, const char** argv){
-	int numberOfVideos = sizeof(videoLocations) / sizeof(videoLocations[0]);
-	cv::VideoCapture * videos = new VideoCapture[numberOfVideos];
-	//loadVideos(media,);
-	loadVideosFromFile(media,videoLocations,numberOfVideos,videos);
-	processVideos(numberOfVideos, videos);
-	return 0;
+    int numberOfVideos = sizeof(videoLocations) / sizeof(videoLocations[0]);
+    cv::VideoCapture * videos = new VideoCapture[numberOfVideos];
+    loadVideosFromFile(media,videoLocations,numberOfVideos,videos);
+    processVideos(numberOfVideos, videos);
+    return 0;
 }

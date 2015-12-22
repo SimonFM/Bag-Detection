@@ -7,3 +7,5 @@ using namespace cv;
 void loadVideosFromFile(char * fileLocation, char ** imageFiles, int size, VideoCapture * &images);
 
 void processVideos(int size, VideoCapture * &videos);
+
+void genereateMetrics();
